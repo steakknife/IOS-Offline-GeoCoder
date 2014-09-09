@@ -8,13 +8,16 @@
 
 #import "reverseGeoCoder.h"
 
+#import <NSData+GZIP.h>
+
 @implementation reverseGeoCoder
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        NSData *jsonFile = [[NSData alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"CountriesGeoCode" ofType:@"json"]];
+        NSData *jsonFileGZ = [[NSData alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"CountriesGeoCode" ofType:@"jsongz"]];
+        NSData *jsonFile = [jsonFileGZ gunzippedData];
         _countryGeoData = [NSJSONSerialization JSONObjectWithData:jsonFile options:0 error:nil];
     }
     return self;

@@ -17,9 +17,10 @@ Pod::Spec.new do |s|
   s.source = { :git => "https://github.com/soheilbm/IOS-Offline-GeoCoder.git", :tag => "v0.0.2"}
 
   s.source_files  = 'Classes/reverseGeoCoder.{h,m}'
-  s.resources    = 'Classes/CountriesGeoCode.json'
+  s.resources    = 'Classes/CountriesGeoCode.jsongz'
 
   s.frameworks = 'Foundation', 'CoreLocation'
+  s.dependency = 'GZIP'
 
   s.requires_arc = true
 end
