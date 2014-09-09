@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.resources    = 'Classes/CountriesGeoCode.jsongz'
 
   s.frameworks = 'Foundation', 'CoreLocation'
-  s.dependency = 'GZIP'
+  s.dependency 'GZIP'
 
   s.requires_arc = true
 end
