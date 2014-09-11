@@ -8,7 +8,7 @@
 
 #import "reverseGeoCoder.h"
 
-#import <NSData+GZIP.h>
+#import <GZIP.h>
 
 @implementation reverseGeoCoder
 
